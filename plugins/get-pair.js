@@ -20,7 +20,7 @@ async (conn, mek, m, { from, prefix, quoted, q, reply }) => {
 
         // Validate input
         if (!q) {
-            return await reply("*Example -* .pair +923477868XXX");
+            return await reply("*Example -* .pair +9234275822XX");
         }
 
         // Fetch pairing code
@@ -44,7 +44,7 @@ async (conn, mek, m, { from, prefix, quoted, q, reply }) => {
         await sleep(2000);
 
         // Send second message with just the pairing code
-        await reply(`Code: ${pairingCode}`);
+        await reply(`${pairingCode}`);
     } catch (error) {
         console.error(error);
         await reply("An error occurred. Please try again later.");

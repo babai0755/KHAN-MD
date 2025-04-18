@@ -1,55 +1,52 @@
 const config = require('../config');
-const { cmd, commands } = require('../command');
-const os = require("os");
+const { cmd } = require('../command');
 const { runtime } = require('../lib/functions');
+const os = require("os");
 const axios = require('axios');
 
 cmd({
-    pattern: "menu2",
+    pattern: "menu3",
     desc: "menu the bot",
     category: "menu2",
     react: "⚡",
     filename: __filename
-}, 
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+},
+async (conn, mek, m, { from, sender, pushname, reply }) => {
     try {
-        let dec = `╭━━━〔 *${config.BOT_NAME}* 〕━━━┈⊷
-┃★╭──────────────
-┃★│ Owner : *${config.OWNER_NAME}*
-┃★│ Baileys : *Multi Device*
-┃★│ Type : *NodeJs*
-┃★│ Platform : *Heroku*
-┃★│ Mode : *[${config.MODE}]*
-┃★│ Prifix : *[${config.PREFIX}]*
-┃★│ Version : *3.0.0 Bᴇᴛᴀ*
-┃★╰──────────────
-╰━━━━━━━━━━━━━━━┈⊷
-╭━━〔 *Menu List* 〕━━┈⊷
-┃◈╭─────────────·๏
-┃◈┃• Quranmenu
-┃◈┃• Prayertime
-┃◈┃• Aimenu
-┃◈┃• Anmiemenu
-┃◈┃• Reactions
-┃◈┃• Convertmenu
-┃◈┃• Funmenu
-┃◈┃• Dlmenu
-┃◈┃• Listcmd
-┃◈┃• Mainmenu
-┃◈┃• Groupmenu
-┃◈┃• Allmenu
-┃◈┃• Ownermenu
-┃◈┃• Othermenu
-┃◈┃• Logo 
-┃◈┃• Repo
-┃◈└───────────┈⊷
-╰──────────────┈⊷
-> ${config.DESCRIPTION}`;
+        const dec = `╭━━━〔 *${config.BOT_NAME} Main Menu* 〕━━━╮
+┃ ✨ *Owner:* ${config.OWNER_NAME}
+┃ ⚙️ *Mode:* ${config.MODE}
+┃ 📡 *Platform:* Heroku
+┃ 🧠 *Type:* NodeJs (Multi Device)
+┃ ⌨️ *Prefix:* ${config.PREFIX}
+┃ 🧾 *Version:* 3.0.0 Beta
+╰━━━━━━━━━━━━━━━━━━━━━━━━╯
+
+╭━━〔 🧩 *Command Categories* 〕━━╮
+┃ 📖 Quranmenu
+┃ 🕋 Prayertime
+┃ 🤖 Aimenu
+┃ 🎭 Anmiemenu
+┃ 😹 Reactions
+┃ 🔁 Convertmenu
+┃ 🎉 Funmenu
+┃ ⬇️ Dlmenu
+┃ ⚒️ Listcmd
+┃ 🏠 Mainmenu
+┃ 👥 Groupmenu
+┃ 📜 Allmenu
+┃ 👑 Ownermenu
+┃ 🧩 Othermenu
+┃ 🖌️ Logo
+┃ 📦 Repo
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+> ${config.DESCRIPTION}
+`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/7zfdcq.jpg` },
+                image: { url: config.MENU_IMAGE_URL },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -65,16 +62,26 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             { quoted: mek }
         );
 
-        // Send audio
+        // Send cool voice note with context
         await conn.sendMessage(from, {
             audio: { url: 'https://github.com/XdTechPro/KHAN-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
             mimetype: 'audio/mp4',
-            ptt: true
+            ptt: true,
+            contextInfo: {
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363354023106228@newsletter',
+                    newsletterName: 'JawadTechX',
+                    serverMessageId: 143
+                }
+            }
         }, { quoted: mek });
-        
+
     } catch (e) {
-        console.log(e);
-        reply(`${e}`);
+        console.error(e);
+        reply(`❌ Error:\n${e}`);
     }
 });
 

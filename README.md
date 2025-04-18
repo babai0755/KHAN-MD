@@ -1,15 +1,9 @@
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=100&pause=1000&color=FF0000&center=true&width=1000&height=200&lines=KHAN-MD-V3.0" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=100&pause=1000&color=ff0000&center=true&width=1000&height=200&lines=KHAN-MD-V4.0" alt="Typing SVG" /></a>
   </p>
   
 ---  
 
 > **`Updated To` The Version 4.0**
----
-
-```
-KHAN-MD BY JawadTechX 💜 
-```
-
 --- 
 
 <a><img src='https://cdn.ironman.my.id/i/9zd4if.jpg'/></a>
@@ -47,12 +41,14 @@ Start by forking this repository to your own GitHub account. Click the button be
 
 > Get Pair Code (Session ID)
 
+<p align="left">  
+<a href='https://khanmdx.onrender.com' target="_blank"><img alt='Get Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-000000?style=for-the-badge&logo=codefactor&logoColor=white'/></a>  
+</p>  
 
+> Get Pair Code (Session ID)
 
 <p align="left">  
-<a href='https://khanmdx.onrender.com' target="_blank"><img alt='Get Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-B700FB?style=for-the-badge&logo=codefactor&logoColor=white'/></a>  
-</p>  <p align="left">  
-<a href='https://khanmdx2.onrender.com' target="_blank"><img alt='Get Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-000000?style=for-the-badge&logo=codefactor&logoColor=white'/></a>  
+<a href='https://jawadmdx.onrender.com' target="_blank"><img alt='Get Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-ff0000?style=for-the-badge&logo=codefactor&logoColor=white'/></a>  
 </p>  
 
 
